@@ -16,4 +16,7 @@ app.use(express.json())
 app.use('/auth/login',login)
 app.use('/auth/register',register)
 app.use('/data',data)
+app.all("/", (req, res) => {
+   res.send("Hello  There!."})
+})
 app.listen(process.env.PORT)
